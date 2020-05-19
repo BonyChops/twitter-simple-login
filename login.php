@@ -4,7 +4,7 @@ include_once __DIR__.'/define.php';
 use Abraham\TwitterOAuth\TwitterOAuth;
 
 
-if(!isset($_GET['ready']) || $_GET['ready'] != "true"){
+if(!isset($_GET['ready']) || ($_GET['ready'] != "true")){
     print("<h1>Final Check</h1>\nIs it all right?<pre><code>");
     var_dump($config);
     print("</pre></code>\nIf it so, then <a href=\"login.php?ready=true\">LOGIN</a> !!!");
