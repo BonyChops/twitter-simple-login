@@ -1,5 +1,5 @@
 {
-    "accessToken": "***",
-    "accessTokenSecret": "***",
-    "redirectURL": "***/callback.php"
+    "ConsumerKey": "***",
+    "ConsumerSecretKey": "***",
+    "CallbackURL": "***/callback.php"
 }
