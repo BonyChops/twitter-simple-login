@@ -6,7 +6,7 @@ use Abraham\TwitterOAuth\TwitterOAuth;
 
 if(!isset($_GET['ready']) || ($_GET['ready'] != "true")){
     print("<h1>Final Check</h1>\nIs it all right?<pre><code>");
-    var_dump($config);
+    var_dump($data);
     print("</pre></code>\nIf it so, then <a href=\"login.php?ready=true\">LOGIN</a> !!!");
     exit;
 }
