@@ -1,0 +1,12 @@
+<Files ~ ".(json|lock)$">
+  deny from all
+</Files>
+<Files ~ "vendor/">
+  deny from all
+</Files>
+
+# Please change '192.168.1.1' to your IP address
+# but remember that's Global IP, not Local one. XD
+
+allow from 192.168.1.1 # Change this!
+deny from all
