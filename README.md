@@ -17,7 +17,7 @@ Please DO NOT use this for user authentication. This is just for checking by dev
 ```
 composer install
 ```
-3. Go to [developer.twitter.com/](https://developer.twitter.com) and create your own app. Redirect URL must be `http(s)://path/to/here/callback.php`
+3. Go to [developer.twitter.com/](https://developer.twitter.com) and create your own app. One of "Callback URLs" must be `http(s)://path/to/here/callback.php`
 1. Modify `config-sample.json` and rename to `config.json`.
 1. Modify `.htaccess` to block user which is not you (follow instructions written in `.htaccess`).
 
