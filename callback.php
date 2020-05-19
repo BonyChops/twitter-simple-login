@@ -2,6 +2,7 @@
 include_once __DIR__.'/define.php';
 use Abraham\TwitterOAuth\TwitterOAuth;
 
+session_start();
 //oauth_tokenとoauth_verifierを取得
 if($_SESSION['oauth_token'] == $_GET['oauth_token'] and $_GET['oauth_verifier']){
 
