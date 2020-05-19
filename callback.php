@@ -13,13 +13,9 @@ if($_SESSION['oauth_token'] == $_GET['oauth_token'] and $_GET['oauth_verifier'])
 	//取得したアクセストークンでユーザ情報を取得
 	$user_connection = new TwitterOAuth(Consumer_Key, Consumer_Secret, $access_token['oauth_token'], $access_token['oauth_token_secret']);
 	$user_info = $user_connection->get('account/verify_credentials');
-
-    print("These access token won't keep automatically so keep it by yourself!\n<a href=\"logout.php\">LOGOUT</a><br><h1>Access Token</h1>\n<pre><code>");
-    var_dump($access_token);
-    print("</pre></code><h1>User Data</h1>\n<pre><code>");
-    var_dump($user_info);
-    print("</pre></code>");
-	exit();
+    $_SESSION['ACCESS_TOKEN'] = $access_token;
+    $_SESSION['USER_INFO'] = $user_info;
+    header("location: result.php");
 }else{
 	print("You have to access login.php first!");
 	exit();
