@@ -14,11 +14,11 @@ if($_SESSION['oauth_token'] == $_GET['oauth_token'] and $_GET['oauth_verifier'])
 	$user_connection = new TwitterOAuth(Consumer_Key, Consumer_Secret, $access_token['oauth_token'], $access_token['oauth_token_secret']);
 	$user_info = $user_connection->get('account/verify_credentials');
 
-    print("<h1>Access Token</h1>\n<pre><code>");
+    print("These access token won't keep automatically so keep it by yourself!\n<a href=\"logout.php\">LOGOUT</a><br><h1>Access Token</h1>\n<pre><code>");
     var_dump($access_token);
-    print("</pre></code><h1>Access Token</h1>\n<pre><code>");
+    print("</pre></code><h1>User Data</h1>\n<pre><code>");
     var_dump($user_info);
-    print("</pre></code><br>These access token won't keep automatically so keep it by yourself!\n<a href=\"logout.php\">LOGOUT</a>");
+    print("</pre></code>");
 	exit();
 }else{
 	print("You have to access login.php first!");
